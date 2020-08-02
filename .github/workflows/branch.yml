@@ -1,0 +1,16 @@
+on:
+  push:
+
+jobs:
+  update_lean_3x_branch:
+    runs-on: ubuntu-latest
+    name: Update lean-3.*.* branch
+    steps:
+
+    - name: checkout mathlib
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: update branch
+      uses: leanprover-contrib/update-versions-action@master
