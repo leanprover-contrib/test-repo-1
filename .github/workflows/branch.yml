@@ -1,5 +1,7 @@
 on:
   push:
+    branches:
+      - master
 
 jobs:
   update_lean_3x_branch:
