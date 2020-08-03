@@ -11,4 +11,5 @@ jobs:
       - uses: actions/checkout@v2
       - uses: leanprover-contrib/lean-upgrade-action@master
         with:
+          repo: ${{ github.repository }}
           access-token: ${{ secrets.PAT }}
