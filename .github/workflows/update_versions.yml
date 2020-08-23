@@ -11,12 +11,9 @@ jobs:
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
-        
-    - run: |
-       echo "$GITHUB_REF"
 
     - name: update branch
-      if: ${{ $GITHUB_REF == 'ref/head/master' }}
+      if: github.ref == 'refs/heads/master'
       uses: leanprover-contrib/update-versions-action@master
 
     - name: build project
