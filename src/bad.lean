@@ -1,4 +1,3 @@
-import order.galois_connection
+import data.nat.bitwise 
 
-#check nat
-
+def nat.bit_ff := 3
